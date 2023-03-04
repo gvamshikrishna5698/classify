@@ -1,0 +1,18 @@
+table{
+    margin: auto;
+    margin-top: 4.2rem;
+    border-collapse: collapse;
+}
+thead{
+    border-bottom: 1px solid #1864ab;
+}
+
+td, tr, th{
+    padding: 1.4rem 2rem;
+    font-size: 1.4rem;
+    border-bottom: 0.5px solid #1971c2;
+}
+
+th{
+    color: #023b71;
+}

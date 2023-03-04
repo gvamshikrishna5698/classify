@@ -1,0 +1,27 @@
+<div class="container" *ngIf="response != null ">
+    <table class="reponse-table">
+        <tr>
+            <td>Request Owner</td>
+            <td>{{response.requestOwner}}</td>
+        </tr>
+        <tr>
+            <td>Request Category</td>
+            <td>{{response.requestCategory}}</td>
+        </tr>
+
+        <tr *ngIf="response.dateCreated">
+           <td>Created On</td>
+           <td>{{response.dateCreated | date: 'dd/mm/yyyy'}}</td>
+       </tr>
+
+       <tr *ngIf="response.requestStatus">
+           <td>Request Status</td>
+           <td>{{response.requestStatus}}</td>
+       </tr>
+       <tr>
+        <td>Classification</td>
+        <td>{{response.classificationResult}}</td>
+    </tr>
+    </table>
+ </div>
+ 

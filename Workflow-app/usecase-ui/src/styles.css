@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #eee ;
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    margin-top: 4.8rem;
+}
+
+.main-heading-1{
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #1864ab;
+}
+
+.file-grid{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    width: 100%;
+    border-bottom: 1px dashed #0c5395;
+}
+
+.file-grid input[type = 'file']{
+    display: none;
+}
+
+label{
+    margin: 3rem 6rem 3rem 6rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #1864ab;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3S;
+}
+label:hover{
+    background-color: #0c5395;
+}
+
+.button-primary{
+    border: none;
+    background-color: #1864ab;
+    color: #eee;
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    transition: all 0.3s;
+}
+
+.button-primary:hover{
+    background-color: #0c5395;
+}
+
+
+
+.upload-icon{
+    background-color: inherit ;
+    margin-right: 1rem;
+}
+
+.ng2-pdf-viewer-container{
+    overflow-x: unset !important;
+}
+
+.file-preview-icon{
+    margin:auto;
+    font-size: 5.6rem;
+    color:#0c5395;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.token-container{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.6rem;
+    column-gap: 1.4rem;
+}
+
+.token{
+    background-color: #1864ab;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.reponse-table{
+    margin: auto;
+    font-size: 1.4rem;
+    border: 1px solid #555;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    color: #222;
+    text-align: center;
+}
+
+.reponse-table td, .reponse-table th, .reponse-table tr{
+    padding: 1rem 2rem;
+    border: 1px solid #555;
+}
+
+.file-names{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    color: #1864ab;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.4rem;
+}
+
+.button-succsess{
+    background-color: #2f9e44;
+}
+.button-succsess:hover{
+    background-color: #2b8a3e;
+}
+

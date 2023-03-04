@@ -1,0 +1,56 @@
+<div class="main-file-container">
+    <div>
+        <div class="nav-menu">
+            <i class="fa fa-chevron-left" (click) = "renderFile()" aria-hidden="true"></i>
+            <i class="fa fa-chevron-right" (click) = "renderFile()" aria-hidden="true"></i>
+        </div>
+        <div class="pdf-preview">
+            <div class="file-preview-icon" *ngIf="isImage || isPdf">
+                <div *ngIf="isPdf" class="fake-wrapper" style="width:580px;height:780px; overflow:hidden;">
+                    <div  class="pdf-container" style=" width:580px; height:780px;">
+                        <pdf-viewer [src]="localUrl"  
+                                    [render-text]="true" 
+                                    [fit-to-page]="true"  
+                                    [show-borders]="false"
+                                    style="width: 600px; height:800px">
+                            </pdf-viewer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img [src]="imgURL"  *ngIf="isImage" width="400">
+    </div>
+
+    <div>
+        <h1 class="main-heading-1">Request Info!</h1>
+        <table *ngIf="workRequest">
+            <tr>
+                <td>Reference Number:</td>
+                <td>{{workRequest.referenceNumber}}</td>
+            </tr>
+            <tr>
+                <td>Customer Name: </td>
+                <td>{{workRequest.customerName}}</td>
+            </tr>
+            <tr>
+                <td>Work Type:</td>
+                <td>{{workRequest.workType}}</td>
+            </tr>
+            <tr>
+                <td>Request Status: </td>
+                <td>{{workRequest.status}}</td>
+            </tr>
+            <tr>
+                <td>Date Created: </td>
+                <td>{{workRequest.dateCreated | date: 'dd/MM/yyyy'}}</td>
+            </tr>
+        </table>
+        <p>Action Comment</p>
+        <textarea *ngIf="workRequest"  id="actionComment" [(ngModel)]="this.workRequest.actionComment">
+
+        </textarea>
+        <button (click)="saveRequest()" class="button-primary"> Save </button>
+    </div>
+</div>
+
+<app-spinner *ngIf="showSpinner"></app-spinner>

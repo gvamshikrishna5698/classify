@@ -1,0 +1,8 @@
+<div class="container">
+    <h1 class="main-heading-1">Find Worktype by Text!</h1>
+    <textarea id="text" [(ngModel)]="this.text">
+    </textarea>
+    <button class="button-primary" [disabled]="text.length < 10"  (click) = "processRequest()">Send Request</button>
+</div>
+<app-result [response]=this.response></app-result>
+<app-spinner *ngIf="showSpinner"></app-spinner>

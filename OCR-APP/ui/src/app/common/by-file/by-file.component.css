@@ -1,0 +1,33 @@
+button{
+    margin-bottom: 1.8rem;;
+}
+
+.delete-icon{
+    color: #c92a2a;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-left: 1.3rem;
+}
+
+.main-file-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    row-gap: 4.2rem;
+    padding: 0 2.4rem;
+    column-gap: 6.4rem;
+}
+
+input{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem 1.2rem;
+    border: 2px solid #1864ab;
+    text-align: center;
+    border-radius: 8px;
+}
+
+input:focus{
+    border: 3px solid #0b5193;
+    outline: none;
+}

@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="add-doc-type">
+        <div class="form-custom">
+            <div class="filed-set">
+                <h1 class="main-heading-1">Add Doc Type here!</h1>
+            </div>
+            <div class="filed-set">
+                <input type="text" 
+                    placeholder="Category"
+                    [(ngModel)]="docType.category" id="category" #category="ngModel" name="category" class="form-control" required="required" minlength="5">
+            </div>
+            <div class="filed-set">
+                <input type="text" 
+                placeholder="Doc Type name"
+                [(ngModel)]="docType.docTypeName" id="docTypeName" #docTypeName="ngModel" name="docTypeName" class="form-control" required="required" minlength="5">
+            </div>
+            <div class="filed-set">
+                <input type ="text" minlength="5"
+                placeholder="keyword"  [(ngModel)]="tmpKeyword" name="something">
+                <button (click) ="addKeyword()" class="button-primary button-succsess">add</button>
+            </div>
+
+            <div class="filed-set">
+                <div class="keywords-preview-container">
+                    <span class="keyword-preview" *ngFor="let keyword of docType.keywords;let index = index">
+                        {{keyword['keyword']}}
+                        <i class="fa fa-trash delete-icon remove-button" aria-hidden="true" (click) = "removeKeyword(index)"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="filed-set">
+                <button type="submit" class="btn button-primary btn-save" (click) ="saveDocType()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-spinner *ngIf="showSpinner"></app-spinner>

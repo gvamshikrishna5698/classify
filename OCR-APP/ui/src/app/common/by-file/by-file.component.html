@@ -1,0 +1,49 @@
+<div class="main-file-container">
+    <div>
+        <div class="container">
+            <h1 class="main-heading-1">Find Worktype by File!</h1>
+            <input name="refernceNumber" [(ngModel)] = "referenceNumber" placeholder="Reference Number">
+            <input name="customerName" [(ngModel)] = "customerName" placeholder="Customer Name">
+            <div class="file-grid">
+                <input 
+                    type="file" 
+                    id="file" 
+                    accept=".jpg,.png,.pdf,.txt,.tif,.TIF,.TIFF"
+                    #file
+                    (change) = "addFile(file.files!)"
+                    />
+                <div *ngIf="filesList && filesList.length > 0" class="file-names">
+                    <div *ngFor="let file of filesList;let index = index">
+                        {{file.name}}
+                        <i class="fa fa-trash delete-icon" aria-hidden="true" (click)="removeSelectedFile(index)"></i>
+                    </div>
+                </div>
+                <label for="file">
+                    <i class="fa fa-upload upload-icon" aria-hidden="true"></i>
+                    Choose File
+                </label>
+                <button class="button-primary button-succsess" (click) = "sendRequest()">Send Request</button>
+            </div>
+        </div>
+        <app-result [response]=this.response></app-result> 
+    </div>
+
+    <div class="pdf-preview">
+        <div class="file-preview-icon" *ngIf="isImage || isPdf">
+            <div *ngIf="isPdf" class="fake-wrapper" style="width:580px;height:780px overflow:hidden;">
+                <div  class="pdf-container" style=" width:580px; height:780px;">
+                    <pdf-viewer [src]="localUrl"  
+                                [render-text]="true" 
+                                [fit-to-page]="true"  
+                                [show-borders]="false"
+                                style="width: 600px; height:800px">
+                        </pdf-viewer>
+                </div>
+            </div>
+            
+            <img [src]="imgURL"  *ngIf="isImage" width="400">
+        </div>
+    </div>
+    
+</div>
+<app-spinner *ngIf="showSpinner"></app-spinner>

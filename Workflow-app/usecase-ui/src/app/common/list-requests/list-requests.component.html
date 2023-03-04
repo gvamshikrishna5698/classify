@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="main-heading-1">The pending Work Requests</h1>
+</div>
+<div class="request-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Reference Number</th>
+                <th>WorkType</th>
+                <th>Status</th>
+                <th>Documents No</th>
+                <th>Last Created</th>
+                <th>Last Updated</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let wi of workRequest">
+                <td>{{wi.customerName}}</td>
+                <td>{{wi.workType}}</td>
+                <td>{{wi.status == null ? 'open' : wi.status}}</td>
+                <td>{{wi.documents.length}}</td>
+                <td>{{wi.dateCreated | date: 'dd/MM/yyyy'}}</td>
+                <td>{{wi.lastUpdated| date: 'dd/MM/yyyy'}}</td>
+                <td><a href="/work-request/{{wi.id}}">Process</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

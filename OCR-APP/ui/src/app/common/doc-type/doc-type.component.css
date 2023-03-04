@@ -1,0 +1,82 @@
+label{
+    background-color: inherit;
+    color: #1864ab;
+    padding: 0;
+}
+
+.filed-set{
+    display: grid;
+    grid-template-columns: 1fr 6rem;
+    justify-content: end;
+    column-gap: 1.2rem;
+    align-items: end;
+}
+
+.form-custom{
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+input{
+    width: 250px;
+    outline: none;
+    border: 2px solid #1864ab;
+    border-radius: 6px;
+    padding: 1rem 1.4rem;
+}
+
+input:focus{
+    border:3px solid #1864ab
+}
+
+.dd-btn{
+    justify-content: left;
+}
+
+.button-succsess{
+    margin-top: 0;
+    background-color: #1c7ed6;
+}
+
+.button-succsess:hover{
+    background-color: #1864ab;
+}
+.btn-save{
+    width:20rem;
+}
+
+
+h1{
+    margin-bottom: 2rem;
+}
+
+.keywords-preview-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-around;
+    row-gap: 1.2rem;
+    align-items: left;
+    column-gap: 1.4rem;
+    font-size: 1.2rem;
+}
+
+.keyword-preview{
+    border: 1px solid #1971c2;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    background-color: #1c7ed6;
+    color: #fff;
+    margin-top: 1.2rem;
+}
+
+.remove-button{
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 0.6rem;
+}
+

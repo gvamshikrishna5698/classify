@@ -1,0 +1,52 @@
+.main-header-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    background-color: #1864ab;
+    color: #eee;
+    align-items: center;
+}
+
+.header-logo{
+    background-color: inherit;
+    color: inherit;
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+
+.header-link{
+    background-color: #1864ab;
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    column-gap: 2rem;
+    transition: all 1s;
+}
+
+.nav-link{
+    background-color: #1864ab !important;
+    color: #eee;
+    text-decoration: none;
+}
+
+.nav-link::after{
+    content: '';
+    width: 0%;
+    background-color: #fff;
+    height: 2px;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+
+
+.nav-link:hover::after{
+    width: 100%;
+}
+p{
+    background-color: inherit;
+}

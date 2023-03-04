@@ -1,0 +1,76 @@
+.container{
+    max-width: 800px;
+    margin: auto;
+    margin-top: 4.8rem;
+}
+
+.main-heading-1{
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #1864ab;
+}
+
+.file-grid{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    width: 100%;
+    border-bottom: 1px dashed #0c5395;
+}
+
+.file-grid input[type = 'file']{
+    display: none;
+}
+
+label{
+    margin: 3rem 6rem 3rem 6rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #1864ab;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3S;
+}
+label:hover{
+    background-color: #0c5395;
+}
+
+.upload-icon{
+    background-color: inherit ;
+    margin-right: 1rem;
+}
+
+.ng2-pdf-viewer-container{
+    overflow-x: unset !important;
+}
+
+.file-preview-icon{
+    margin:auto;
+    font-size: 5.6rem;
+    color:#0c5395;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.token-container{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.6rem;
+    column-gap: 1.4rem;
+}
+
+.token{
+    background-color: #1864ab;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.4rem;
+}
